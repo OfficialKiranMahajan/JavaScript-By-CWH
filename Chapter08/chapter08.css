@@ -1,0 +1,71 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  width: 50%;
+  height: 20vh;
+  border: 1px dashed #0d0d0d;
+}
+.BoxContainer {
+  display: flex;
+}
+#boxOne,
+#btnOne {
+  background-color: #ffd700;
+}
+#boxTwo,
+#btnTwo {
+  background-color: #ff00ff;
+}
+#boxThree,
+#btnThree {
+  background-color: #00fa9a;
+}
+#boxFour,
+#btnFour {
+  background-color: #00bfff;
+}
+#boxFive,
+#btnFive {
+  background-color: #ff1493;
+}
+
+#boxSetAttribute {
+  background-color: #f44e5c;
+  color: #fff;
+}
+.btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons {
+  border: none;
+  cursor: pointer;
+  border-radius: 1em;
+  padding: 1em;
+  transition: ease-in 5ms;
+}
+.buttons:active {
+  background-color: #fff !important;
+  box-shadow: 2px 2px 5px #1d1c1b;
+}
+#insertionContainer {
+  background-color: #ff8103;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  height: 10vh;
+  width: 50%;
+  padding: 2em;
+  margin-top: 1em;
+  margin-left: 25%;
+}

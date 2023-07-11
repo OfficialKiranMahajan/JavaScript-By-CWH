@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chapter08.css">
+    <title>Chapter08: Events And Other DOM Properties</title>
+</head>
+
+<body><!--A commentNode before change-->
+    <div class="BoxContainer">
+        <div id="boxOne" class="box">
+            <h3>
+                boxOne
+            </h3>
+        </div>
+        <div id="boxTwo" class="box">
+            <h3>
+                boxTwo
+            </h3>
+        </div>
+        <div id="boxThree" class="box">
+            <h3>
+                boxThree
+            </h3>
+        </div>
+        <div id="boxFour" class="box">
+            <h3>
+                boxFour
+            </h3>
+        </div>
+        <div id="boxFive" class="box" data-name="kiranMahajan">
+            <h3>
+                boxFive
+            </h3>
+        </div>
+
+    </div>
+    <div class="btnContainer">
+        <button id="btnOne" class="buttons" onclick="hasAttributeFunction();">
+            boxOne.hasAttribute("id")
+        </button>
+        <button id="btnTwo" class="buttons">
+            boxTwo.getAttribute("class")
+        </button>
+        <button id="btnThree" class="buttons">
+            boxThree.setAttribute("id", "boxSetAttribute")
+        </button>
+        <button id="btnFour" class="buttons">
+            boxFour.removeAttribute("id")
+        </button>
+        <button id="btnFive" class="buttons">
+            boxFive.attributes
+        </button>
+    </div>
+    <div id="insertionContainer">
+
+    </div>
+    <script src="chapter08.js"></script>
+
+</body>
+
+</html>
