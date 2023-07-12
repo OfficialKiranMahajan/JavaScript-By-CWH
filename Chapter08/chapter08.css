@@ -59,13 +59,68 @@
   box-shadow: 2px 2px 5px #1d1c1b;
 }
 #insertionContainer {
+  border: 0.3em solid rgb(0, 0, 0);
+  border-radius: 1em;
   background-color: #ff8103;
   display: flex;
   align-items: center;
-  text-align: justify;
-  height: 10vh;
+  justify-content: center;
+  height: 30vh;
   width: 50%;
   padding: 2em;
-  margin-top: 1em;
-  margin-left: 25%;
+  flex-direction: column;
+}
+.insertionMethods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+p {
+  color: #f90909;
+  font-size: 1em;
+}
+#aDiv {
+  border: 0.3em solid rgb(0, 0, 0);
+
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  background-color: #ffd700;
+}
+.insertAdjacentHTML {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+hr {
+  border-color: #f90909;
+  width: 100%;
+}
+#colorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.red {
+  width: 40%;
+  background-color: red;
+}
+.blue {
+  width: 40%;
+  background-color: blue;
+}
+.green {
+  width: 40%;
+  background-color: green;
+}
+.yellow {
+  width: 40%;
+  background-color: yellow;
 }

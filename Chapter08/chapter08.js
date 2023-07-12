@@ -70,6 +70,31 @@ console.log(boxFive.dataset.name);
 const paraOne = document.createElement("p"); // creates an element and stores it into paraOne
 paraOne.className = "paragraphOne"; // sets a class="paragraphOne"
 paraOne.innerHTML =
-  "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam vitae saepe adipisci! Tenetur error ipsa voluptatibus accusantium qui nostrum natus rerum, delectus in ipsam! Fugit laudantium quo labore in nostrum praesentium, magnam aliquid doloremque "; // inserts content inside <p></p>
-document.getElementById("insertionContainer").appendChild(paraOne); // inserts it into the selected element but at the end
+  "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam vitae saepe adipisci! Tenetur error ipsa voluptatibus accusantium"; // inserts content inside <p></p>
+const insertionContainer = document.getElementById("insertionContainer");
 
+insertionContainer.append(paraOne); // inserts element at inner end
+insertionContainer.prepend(paraOne); // inserts element at inner start
+insertionContainer.before(paraOne); // inserts element at outer start
+insertionContainer.after(paraOne); // inserts element at outer end
+const heading = document.createElement("div");
+heading.innerHTML = "<h3>Hello😈!</h3>";
+insertionContainer.firstElementChild.nextElementSibling.replaceWith(heading);
+
+// insertAdjacentHTML/Text/Element:
+const aDiv = document.getElementById("aDiv");
+aDiv.insertAdjacentHTML("beforebegin", "<h2>beforebegin😀</h2>");
+aDiv.insertAdjacentHTML("afterbegin", "<h2>afterbegin😁</h2>");
+aDiv.insertAdjacentHTML("beforeend", "<h2>beforeend😂</h2>");
+aDiv.insertAdjacentHTML("afterend", "<h2>afterend🤣</h2>");
+
+// node removal node.remove();
+paraOne.remove();
+
+// className & classList add/remove/toggle:
+const colorContainer = document.getElementById("colorContainer");
+console.log(colorContainer.classList); // returns a collection of classes
+console.log(colorContainer.classList.contains("space")); // checks contains or not and return boolean
+colorContainer.firstElementChild.classList.remove("red"); // removes a class
+colorContainer.firstElementChild.nextElementSibling.classList.add("blue"); // adds a class
+colorContainer.firstElementChild.classList.toggle("red"); // if class were present removes it if absent adds it
