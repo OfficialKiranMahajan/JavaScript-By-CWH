@@ -124,3 +124,12 @@ hr {
   width: 40%;
   background-color: yellow;
 }
+#coolColors {
+  width: 50%;
+  height: 20vh;
+  background-color: #ff00ff;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.2em dashed #000000;
+  border-radius: 1em;
+}

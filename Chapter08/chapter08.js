@@ -98,3 +98,34 @@ console.log(colorContainer.classList.contains("space")); // checks contains or n
 colorContainer.firstElementChild.classList.remove("red"); // removes a class
 colorContainer.firstElementChild.nextElementSibling.classList.add("blue"); // adds a class
 colorContainer.firstElementChild.classList.toggle("red"); // if class were present removes it if absent adds it
+
+// setTimeout() with clearTimeout() and setInterval() with clearInterval():
+
+const changingBgColorWithInterval = (coolColors, intervalTime) => {
+  const coolColorsDIV = document.getElementById("coolColors");
+  let colorIndex = 0;
+  const changeColor = () => {
+    if (colorIndex < coolColors.length) {
+      const color = coolColors[colorIndex];
+      coolColorsDIV.style.backgroundColor = color;
+      colorIndex++;
+    } else {
+      clearInterval(interval);
+    }
+  };
+  const interval = setInterval(changeColor, intervalTime);
+};
+const intervalTime = 1000;
+const coolColors = [
+  "#FF0000", // Red
+  "#00FF00", // Green
+  "#0000FF", // Blue
+  "#FFFF00", // Yellow
+  "#FF00FF", // Magenta
+  "#00FFFF", // Cyan
+  "#800080", // Purple
+  "#008000", // Dark Green
+  "#FFA500", // Orange
+  "#800000", // Maroon
+];
+changingBgColorWithInterval(coolColors, intervalTime);
