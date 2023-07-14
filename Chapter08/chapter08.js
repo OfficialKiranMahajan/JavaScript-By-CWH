@@ -129,3 +129,68 @@ const coolColors = [
   "#800000", // Maroon
 ];
 changingBgColorWithInterval(coolColors, intervalTime);
+
+// const consoleColorNames = () => {
+//   let timeoutTime = 1000;
+//   const changeColorName = () => {
+//     for (
+//       let colorNameIndex = 0;
+//       colorNameIndex < namesOfCoolColors.length;
+//       colorNameIndex++
+//     ) {
+//       if (colorNameIndex < namesOfCoolColors.length) {
+//         const colorName = namesOfCoolColors[colorNameIndex];
+//         console.log(colorName);
+//         timeoutTime = timeoutTime * colorNameIndex;
+//       } else {
+//         clearTimeout(timeout);
+//       }
+//     }
+//   };
+//   const timeout = setTimeout(changeColorName, timeoutTime);
+// };
+// const namesOfCoolColors = [
+//   "Red",
+//   "Green",
+//   "Blue",
+//   "Yellow",
+//   "Magenta",
+//   "Cyan",
+//   "Purple",
+//   "Dark Green",
+//   "Orange",
+//   "Maroon",
+// ];
+// consoleColorNames();
+
+const consoleColorNames = () => {
+  let timeoutTime = 1000;
+  let colorNameIndex = 0;
+
+  const changeColorName = () => {
+    if (colorNameIndex < namesOfCoolColors.length) {
+      const colorName = namesOfCoolColors[colorNameIndex];
+      console.log(colorName);
+      colorNameIndex++;
+      setTimeout(changeColorName, timeoutTime);
+    }
+  };
+
+  setTimeout(changeColorName, timeoutTime);
+};
+
+const namesOfCoolColors = [
+  "Red",
+  "Green",
+  "Blue",
+  "Yellow",
+  "Magenta",
+  "Cyan",
+  "Purple",
+  "Dark Green",
+  "Orange",
+  "Maroon",
+];
+
+consoleColorNames();
+
