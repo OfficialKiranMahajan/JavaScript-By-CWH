@@ -194,3 +194,20 @@ const namesOfCoolColors = [
 ];
 
 consoleColorNames();
+
+// addEventListener & removeEventLisener :
+const clickMeBtn = document.getElementById("clickMeBtn");
+const eventHandler = document.getElementById("eventHandler");
+
+clickMeBtn.addEventListener("click", (e) => {
+  clickMeBtn.textContent = "Clicked!";
+  eventHandler.style.backgroundColor = "orange";
+  console.log(e); // the Event Object
+  console.log(e.type);
+  console.log(e.currentTarget);
+});
+const bgColorChange = () => {
+  eventHandler.style.backgroundColor = "yellow";
+};
+eventHandler.addEventListener("mouseover", bgColorChange);
+//  eventHandler.removeEventListener("mouseover", bgColorChange);

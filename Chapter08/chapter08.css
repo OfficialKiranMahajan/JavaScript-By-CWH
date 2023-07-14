@@ -2,6 +2,7 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .box {
   display: flex;
@@ -71,8 +72,7 @@
 }
 .insertionMethods {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   width: 100%;
 }
@@ -81,7 +81,6 @@ p {
   font-size: 1em;
 }
 #aDiv {
-  margin-right: 25em;
   border: 0.3em solid rgb(0, 0, 0);
   border-radius: 1em;
   display: flex;
@@ -99,6 +98,7 @@ p {
   align-items: center;
   justify-content: center;
   margin: 1em 0em;
+  padding: 0em 1em;
 }
 .insertAdjacentHTML {
   display: flex;
@@ -140,18 +140,23 @@ hr {
   width: 50%;
   background-color: yellow;
 }
-#coolColors {
+#coolColors,
+#eventHandler {
   width: 50%;
   height: 20vh;
-  background-color: #ff00ff;
-  margin-left: auto;
-  margin-right: auto;
-  border: 0.2em dashed #000000;
+  background-color: #f80a46;
+  border: 0.2em dashed #000;
   border-radius: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 1em;
 }
 #colorIndexH1 {
   color: #fff;
+}
+
+.otherTwoDIV {
+  display: flex;
+  justify-content: space-between;
 }
