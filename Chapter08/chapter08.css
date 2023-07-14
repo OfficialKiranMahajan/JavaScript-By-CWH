@@ -65,7 +65,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30vh;
   width: 50%;
   padding: 2em;
   flex-direction: column;
@@ -75,27 +74,38 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 p {
   color: #f90909;
   font-size: 1em;
 }
 #aDiv {
+  margin-right: 25em;
   border: 0.3em solid rgb(0, 0, 0);
-
   border-radius: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
+  padding: 2em;
   background-color: #ffd700;
+}
+.twoDIV {
+  background-color: #00bfff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0em;
 }
 .insertAdjacentHTML {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 50%;
 }
 hr {
   border-color: #f90909;
@@ -106,22 +116,28 @@ hr {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 1em 0em;
+  width: 100%;
 }
 
 .red {
-  width: 40%;
+  text-align: center;
+  width: 50%;
   background-color: red;
 }
 .blue {
-  width: 40%;
+  text-align: center;
+  width: 50%;
   background-color: blue;
 }
 .green {
-  width: 40%;
+  text-align: center;
+  width: 50%;
   background-color: green;
 }
 .yellow {
-  width: 40%;
+  text-align: center;
+  width: 50%;
   background-color: yellow;
 }
 #coolColors {
@@ -138,4 +154,4 @@ hr {
 }
 #colorIndexH1 {
   color: #fff;
- }
+}
