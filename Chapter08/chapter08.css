@@ -132,4 +132,10 @@ hr {
   margin-right: auto;
   border: 0.2em dashed #000000;
   border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+#colorIndexH1 {
+  color: #fff;
+ }

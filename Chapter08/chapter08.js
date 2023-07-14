@@ -170,7 +170,8 @@ const consoleColorNames = () => {
   const changeColorName = () => {
     if (colorNameIndex < namesOfCoolColors.length) {
       const colorName = namesOfCoolColors[colorNameIndex];
-      console.log(colorName);
+      console.log(colorNameIndex + ")" + " " + colorName);
+      document.getElementById("colorIndexH1").innerHTML = colorName;
       colorNameIndex++;
       setTimeout(changeColorName, timeoutTime);
     }
@@ -193,4 +194,3 @@ const namesOfCoolColors = [
 ];
 
 consoleColorNames();
-
