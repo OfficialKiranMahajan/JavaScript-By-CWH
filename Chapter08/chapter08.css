@@ -3,6 +3,7 @@
   padding: 0%;
   box-sizing: border-box;
   overflow: hidden;
+  user-select: none;
 }
 .box {
   display: flex;
@@ -92,12 +93,11 @@ p {
   background-color: #ffd700;
 }
 .twoDIV {
-  background-color: #00bfff;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1em 0em;
+  margin-top: 0.1em;
   padding: 0em 1em;
 }
 .insertAdjacentHTML {
@@ -116,7 +116,7 @@ hr {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 1em 0em;
+  margin-top: 0.1em;
   width: 100%;
 }
 
@@ -150,7 +150,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1em;
+  margin: 0.2em 1em;
 }
 #colorIndexH1 {
   color: #fff;
@@ -159,4 +159,41 @@ hr {
 .otherTwoDIV {
   display: flex;
   justify-content: space-between;
+}
+.bulbAndColorBar {
+  display: flex;
+  align-items: center;
+}
+.bulbOFF {
+  background-position: center;
+  width: 50%;
+  height: 23vh;
+  background-image: url(https://www.w3schools.com/js/pic_bulboff.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.bulbON {
+  background-position: center;
+  width: 50%;
+  height: 23vh;
+  background-image: url(https://www.w3schools.com/js/pic_bulbon.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#h2OfBulb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+#eventHandler button {
+  background-color: #36454f;
+  border: none;
+  color: #fff;
+  margin: 0.2em;
+  padding: 1em;
+  border-radius: 0.4em;
+}
+#eventHandler button:active {
+  background-color: #808080;
 }

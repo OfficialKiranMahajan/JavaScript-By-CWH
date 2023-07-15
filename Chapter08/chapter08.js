@@ -211,3 +211,40 @@ const bgColorChange = () => {
 };
 eventHandler.addEventListener("mouseover", bgColorChange);
 //  eventHandler.removeEventListener("mouseover", bgColorChange);
+
+// Practice Set08:
+// Q.01
+// done! using onclick attribute
+// Q.02
+// done! using <a> tag
+// Q.03
+const w3schools = document.getElementById("w3schools");
+w3schools.addEventListener("click", () => {
+  window.open("https://www.w3schools.com/", "_blank");
+});
+// Q.04
+const fetchContent = async (url) => {
+  res = await fetch(url);
+  let a = await res.json();
+  return a;
+};
+
+setInterval(async () => {
+  const url = "https://jsonplaceholder.typicode.com/todos/1";
+  console.log(await fetchContent(url));
+}, 10000);
+// Q.05
+const bulb = document.getElementById("bulb");
+setInterval(() => {
+  bulb.classList.toggle("bulbON");
+  bulbONorOFF();
+}, 1000);
+const bulbONorOFF = () => {
+  const bulb = document.getElementById("bulb");
+
+  if (!bulb.classList.contains("bulbON")) {
+    bulb.innerHTML = "<h2 id ='h2OfBulb'>Bulb OFF</h2>";
+  } else {
+    bulb.innerHTML = "<h2 id ='h2OfBulb'>Bulb ON</h2>";
+  }
+};
