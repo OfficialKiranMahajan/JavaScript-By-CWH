@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./bg.png) center no-repeat;
+  background-size: 100%;
+}
+.clock {
+  background-color: #fff;
+  height: 20vw;
+  width: 45vw;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #00c853, #b2ff59);
+}
