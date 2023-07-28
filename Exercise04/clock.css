@@ -27,8 +27,8 @@ body {
   font-family: "Orbitron", monospace;
   background-color: #6289de36;
   backdrop-filter: blur(0.6vw);
-  height: 20vw;
-  width: 45vw;
+  height: 23vw;
+  width: 40vw;
   margin-top: auto;
   margin-bottom: auto;
   color: #eaeef1;
@@ -42,10 +42,18 @@ body {
   justify-content: center;
 }
 .numbers span {
-  flex-shrink: 0;
+  display: inline-block;
   margin: 0vw 1vw;
-  padding: 0vw 0.8vw;
   font-size: 4.5vw;
+}
+#hrs {
+  width: 8vw;
+}
+#min {
+  width: 8vw;
+}
+#sec {
+  width: 8vw;
 }
 .names {
   width: 100%;
@@ -57,12 +65,13 @@ body {
 }
 @media (max-width: 600px) {
   .container {
-    background-size: 100%;
+    background-size: 95%;
   }
   .clock {
     height: 45vw;
     width: 70vw;
     border-radius: 1vw;
+    backdrop-filter: blur(1vw);
   }
   .numbers span {
     font-size: 8vw;
@@ -74,6 +83,15 @@ body {
     color: #a73dc1;
     font-size: 1vw;
     font-family: "Ubuntu", sans-serif;
+  }
+  #hrs {
+    width: 12vw;
+  }
+  #min {
+    width: 15vw;
+  }
+  #sec {
+    width: 15vw;
   }
 }
 
