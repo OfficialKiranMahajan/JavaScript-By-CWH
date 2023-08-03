@@ -46,6 +46,6 @@ const afterSuccess = (error, src) => {
 
 // HOF invokation with afterSuccess as an argument
 loadScript(
-  "https://cdnjs.cloud.flare.com/ajax/libs/jquery/3.6.0/jquery.min.js",
+  "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js",
   afterSuccess
 );

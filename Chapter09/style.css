@@ -1,0 +1,26 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+body {
+  background: rgb(76, 81, 106);
+  background: linear-gradient(
+    90deg,
+    rgba(76, 81, 106, 1) 28%,
+    rgba(135, 127, 129, 1) 95%
+  );
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 3vw;
+  color: rgb(35, 169, 231);
+}
+span {
+  color: rgb(43, 226, 113);
+}
