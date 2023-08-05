@@ -49,3 +49,46 @@ loadScript(
   "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js",
   afterSuccess
 );
+
+// Introduction to Promises:
+let aPromise = new Promise((resolve, reject) => {
+  // Promise who promises the execution of code either it gets resovled or gets rejected.
+  console.log("hey! I'm from a promise outside the setTimeout() "); // snyc execution
+  setTimeout(() => {
+    console.log("hey! I'm from a promise inside the setTimeout()"); // async execution
+    resolve("aPromise is resolved!");
+    console.log(aPromise);
+  }, 2000);
+});
+
+// ChatGPT Promise Example:
+// // Creating a Promise that represents an HTTP request
+// const fetchData = (url) => {
+//   return new Promise((resolve, reject) => {
+//     fetch(url)
+//       .then(response => {
+//         if (response.ok) {
+//           return response.json();
+//         } else {
+//           throw new Error('Network response was not ok.');
+//         }
+//       })
+//       .then(data => {
+//         resolve(data); // Fulfill the Promise with the fetched data
+//       })
+//       .catch(error => {
+//         reject(error); // Reject the Promise with the error
+//       });
+//   });
+// };
+
+// // Using the fetchData Promise
+// const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
+
+// fetchData(apiUrl)
+//   .then(data => {
+//     console.log('Fetched data:', data);
+//   })
+//   .catch(error => {
+//     console.error('Error:', error);
+//   });
