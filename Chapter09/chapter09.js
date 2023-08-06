@@ -100,22 +100,25 @@ fetchData(apiUrl)
   });
 
 // Promises Chaining:
+const loadScript2 = (src) => {
+  return new Promise((resolve, reject) => {
+    let script2 = document.createElement("script");
+    script2.src = src;
+    script2.setAttribute("defer", "");
+    document.head.appendChild(script2);
+    script2.onload = () => {
+      resolve(`Script with ${src} is inserted successfully!`);
+    };
+    script2.onerror = () => {
+      reject(new Error("Sry unexpectedly script failed to load"));
+    };
+  });
+};
 
-// const loadScript2 = (src) => {
-//   return new Promise((resolve, reject) => {
-//     let script2 = document.createElement("script");
-//     script2.src = src;
-//     document.body.appendChild(script2);
-//     if (script2.onload == true) {
-//       console.log(`Script with ${src} is inserted successfully!`);
-//     } else {
-//       throw new Error("Sry unexpectedly script failed to load");
-//     }
-//   }).then(() => {
-//     resolve(1);
-//   });
-// };
-
-// loadScript2(
-//   "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-// );
+loadScript2("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+  .then((message) => {
+    console.log(message);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
