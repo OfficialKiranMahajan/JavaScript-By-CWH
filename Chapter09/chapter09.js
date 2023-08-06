@@ -128,3 +128,22 @@ loadScript2("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
   .catch((err) => {
     console.log(err); // catchs error and prints it if promise gets rejected
   });
+
+// Attaching Multiple Handlers to a Promise
+const dataReturn = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("\nhey!🚀");
+    // resolve(100);
+    reject(new Error("promise got rejected🥹"));
+  }, 4000);
+});
+
+dataReturn.then((value) => {
+  console.log(value + 50);
+});
+dataReturn.then((value) => {
+  console.log(value + 100);
+});
+dataReturn.catch((errrr) => {
+  console.log(errrr.message);
+});
