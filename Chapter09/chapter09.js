@@ -107,18 +107,24 @@ const loadScript2 = (src) => {
     script2.setAttribute("defer", "");
     document.head.appendChild(script2);
     script2.onload = () => {
-      resolve(`Script with ${src} is inserted successfully!`);
+      resolve(`Script with ${src} is inserted successfully!`); // onload promise gets resolved
     };
     script2.onerror = () => {
-      reject(new Error("Sry unexpectedly script failed to load"));
+      reject(new Error("Sry unexpectedly script failed to load")); // onerror promise gets rejected
     };
   });
 };
 
-loadScript2("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+loadScript2("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js") // Invoking loadscript2 func with src
   .then((message) => {
-    console.log(message);
+    console.log(message); // prints resolved message
+    return loadScript2(
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    );
+  })
+  .then((value) => {
+    console.log("This is after another then 😎 " + value); // prints it after getting a new src with invoking loadscript2
   })
   .catch((err) => {
-    console.log(err);
+    console.log(err); // catchs error and prints it if promise gets rejected
   });
