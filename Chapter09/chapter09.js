@@ -56,39 +56,66 @@ let aPromise = new Promise((resolve, reject) => {
   console.log("hey! I'm from a promise outside the setTimeout() "); // snyc execution
   setTimeout(() => {
     console.log("hey! I'm from a promise inside the setTimeout()"); // async execution
-    resolve("aPromise is resolved!");
+    // resolve("aPromise is resolved!");
+    reject(new Error("promise got rejected with ERROR!"));
     console.log(aPromise);
   }, 2000);
 });
+// aPromise.then((value) => {
+//   console.log(value + " I'm After .then");
+// });
+aPromise.catch((error) => {
+  console.log(error + " this error occured sir!");
+});
 
 // ChatGPT Promise Example:
-// // Creating a Promise that represents an HTTP request
-// const fetchData = (url) => {
+// Creating a Promise that represents an HTTP request
+const fetchData = (url) => {
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Network response was not ok.");
+        }
+      })
+      .then((data) => {
+        resolve(data); // Fulfill the Promise with the fetched data
+      })
+      .catch((error) => {
+        reject(error); // Reject the Promise with the error
+      });
+  });
+};
+// Using the fetchData Promise
+const apiUrl = "https://jsonplaceholder.typicode.com/posts/1";
+
+fetchData(apiUrl)
+  .then((data) => {
+    console.log("Fetched data:", data);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
+// Promises Chaining:
+
+// const loadScript2 = (src) => {
 //   return new Promise((resolve, reject) => {
-//     fetch(url)
-//       .then(response => {
-//         if (response.ok) {
-//           return response.json();
-//         } else {
-//           throw new Error('Network response was not ok.');
-//         }
-//       })
-//       .then(data => {
-//         resolve(data); // Fulfill the Promise with the fetched data
-//       })
-//       .catch(error => {
-//         reject(error); // Reject the Promise with the error
-//       });
+//     let script2 = document.createElement("script");
+//     script2.src = src;
+//     document.body.appendChild(script2);
+//     if (script2.onload == true) {
+//       console.log(`Script with ${src} is inserted successfully!`);
+//     } else {
+//       throw new Error("Sry unexpectedly script failed to load");
+//     }
+//   }).then(() => {
+//     resolve(1);
 //   });
 // };
 
-// // Using the fetchData Promise
-// const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
-
-// fetchData(apiUrl)
-//   .then(data => {
-//     console.log('Fetched data:', data);
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//   });
+// loadScript2(
+//   "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+// );
