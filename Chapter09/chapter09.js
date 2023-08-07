@@ -123,7 +123,7 @@ loadScript2("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
     );
   })
   .then((value) => {
-    console.log("This is after another then 😎 " + value); // prints it after getting a new src with invoking loadscript2
+    console.log("This is after another then 😎 " + value); // prints it after getting a new src with invokation of loadscript2
   })
   .catch((err) => {
     console.log(err); // catchs error and prints it if promise gets rejected
@@ -146,4 +146,73 @@ dataReturn.then((value) => {
 });
 dataReturn.catch((errrr) => {
   console.log(errrr.message);
+});
+
+// Promise API- Application Programming Interface:
+const randomPromise01 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("randomPromise01 is resolved!🦸🏻");
+    // reject("Oops!😕");
+  }, 4000);
+});
+const randomPromise02 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("randomPromise02 is resolved!🦸🏻‍♂️");
+    // reject("Oops!🙃");
+  }, 2000);
+});
+const randomPromise03 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("randomPromise03 is resolved!🦸🏻‍♀️");
+    // reject("Oops!🫤");
+  }, 3000);
+});
+
+// Different Methods:
+const allPromises = Promise.all([
+  // after resolving all promises it returns an array of resolved values an error of any of promise can cause overall error
+  randomPromise01,
+  randomPromise02,
+  randomPromise03,
+]).then((value) => {
+  console.log(value);
+});
+
+const allSettledPromises = Promise.allSettled([
+  // returns an array of values of promises eventhough any of them causes error
+  randomPromise01,
+  randomPromise02,
+  randomPromise03,
+]).then((value) => {
+  console.log(value);
+});
+
+const racePromises = Promise.race([
+  // first resolved first served if error happens in ay of the promise results in overall error
+  randomPromise01,
+  randomPromise02,
+  randomPromise03,
+]).then((value) => {
+  console.log(value);
+});
+
+const anyPromises = Promise.any([
+  // returns any of resolved promise value irrespective of any error if all gets rejected returns aggregate error
+  randomPromise01,
+  randomPromise02,
+  randomPromise03,
+]).then((value) => {
+  console.log(value);
+});
+
+const resolvedPromises = Promise.resolve(
+  "resolved promise using Promise.resovled()" // Resolves Promise
+).then((value) => {
+  console.log(value);
+});
+
+const rejectedPromises = Promise.reject(
+  new Error("used Promise.reject() to reject promise") // Rejects Promise
+).then((value) => {
+  console.log(value);
 });
