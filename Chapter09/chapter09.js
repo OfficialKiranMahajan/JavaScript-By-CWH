@@ -216,3 +216,32 @@ const rejectedPromises = Promise.reject(
 ).then((value) => {
   console.log(value);
 });
+
+// asnyc & await:
+const asyncAwaitFunction = async () => {
+  // function should include async to work await inside function's block
+  let mumbaiWheather = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // created a dummy promise which resolving with a string
+      resolve("Mumbai Wheather got resolved!🐼");
+    }, 2000);
+  });
+  let jalgaonWheather = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Jalgaon Wheather got resolved!🐸");
+    }, 5000);
+  });
+  console.log("Fetching Mumbai Wheather...");
+  let mumbai = await mumbaiWheather; // awaits waits for the Promise fulfillment then goes to another line of code
+  console.log("Mumbai Wheather Fetched Successfully!");
+
+  console.log("Fetching Jalgaon Wheather...");
+  let jalgaon = await jalgaonWheather; // or we can say await stops the natural flow of function execution
+  console.log("Jalgaon Wheather Fetched Successfully!");
+
+  return [mumbai, jalgaon];
+};
+let a = asyncAwaitFunction(); // invoking function
+a.then((value) => {
+  console.log(value);
+});
