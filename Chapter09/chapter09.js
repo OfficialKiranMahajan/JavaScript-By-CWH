@@ -241,7 +241,18 @@ const asyncAwaitFunction = async () => {
 
   return [mumbai, jalgaon];
 };
-let a = asyncAwaitFunction(); // invoking function
+let a = asyncAwaitFunction(); // invoking function pretty basic comment lol😂
 a.then((value) => {
   console.log(value);
 });
+
+// Error Handling: try...catch, custom errors & finally Clause --->
+
+try {
+  // ray;
+  throw new ReferenceError("Emotions are not in control👹"); // more types of Errors are there, Check MDN
+} catch (error) {
+  console.log(error.name + "\n" + error.message); // error object
+} finally {
+  console.log("finally, I'm constant i never care of try...catch's execution"); // irrespective of try...catch always executes its code😈
+}
