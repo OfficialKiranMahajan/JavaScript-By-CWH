@@ -40,7 +40,8 @@ body {
 .btn {
   border-width: 0vw;
   border-radius: 0.3vw;
-  height: 2vw;
+  height: 3vw;
+  width: 5vw;
   background-color: rgb(2, 177, 2);
   font-size: 1vw;
   font-weight: 700;
@@ -53,8 +54,7 @@ body {
 }
 #username {
   height: 3vw;
-  min-width: 20vw;
-  width: 22vw;
+  width: 30vw;
   margin-right: 1vw;
   border: none;
   outline: none;
@@ -70,7 +70,7 @@ body {
   color: #03ab30;
   margin-top: 1vw;
   background-color: #000000b7;
-  width: 60%;
+  width: 70%;
   height: 32vw;
   border-radius: 0.6vw;
   border: solid #0beb47 0.1vw;
@@ -104,7 +104,7 @@ body {
   color: rgb(238, 255, 0);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 575.98px) {
   #terminal {
     padding: 2vw;
     width: 90%;
@@ -130,17 +130,11 @@ body {
   }
   .inputUsername {
     margin-top: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-width: 100vmax;
     min-height: 5vmin;
   }
   #glitchedUsername {
     margin-top: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 6vw;
     width: 100%;
   }
@@ -150,5 +144,72 @@ body {
   .Heading {
     font-size: 1.3vw;
     height: 13vw;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #terminal {
+    padding: 2vmin;
+    width: 90%;
+    height: 90vmin;
+    border-radius: 1vmin;
+    font-size: 2.1vmin;
+    margin-bottom: 1vmin;
+  }
+  #username {
+    height: 4vw;
+    width: 40vw;
+    margin-right: 2.5vw;
+    border-radius: 0.6vw;
+    font-size: 1.7vw;
+    padding-left: 1.7vw;
+  }
+  .btn {
+    width: 7vw;
+    border-radius: 0.6vw;
+    height: 4vw;
+    font-size: 1vw;
+    font-weight: 700;
+    padding: 0.2vw 0.8vw;
+  }
+  .inputUsername {
+    margin-top: 1.7vw;
+    min-width: 100vmax;
+    min-height: 5vmin;
+  }
+  #glitchedUsername {
+    margin-top: 1.7vw;
+    height: 5.3vw;
+    width: 100%;
+  }
+  #glitchedUsername h2 {
+    font-size: 3.5vmin;
+  }
+  .Heading {
+    font-size: 1.3vmin;
+    height: 15vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #terminal {
+    width: 80%;
+    height: 90vmin;
+  }
+  #username {
+    height: 4vmin;
+    width: 35vmax;
+    margin-right: 2.5vw;
+    border-radius: 0.6vw;
+    font-size: 1.3vw;
+    padding-left: 1.7vw;
+  }
+  .btn {
+    width: 6vmin;
+    height: 4vmin;
+    font-size: 1vmin;
+    font-weight: 700;
+    padding: 0.2vw 0.8vw;
+  }
+  .Heading {
+    font-size: 1.2vmin;
   }
 }
