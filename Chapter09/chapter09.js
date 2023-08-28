@@ -307,7 +307,6 @@ const promisesssValue = async () => {
 promisesssValue();
 
 // Q.04
-
 const promise01 = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
