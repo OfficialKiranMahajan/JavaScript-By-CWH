@@ -54,9 +54,20 @@ mainFunction();
 document.cookie = "name=walterWhite";
 document.cookie = "name1=stewie";
 document.cookie = "name2=peterGriffin";
-let key = prompt("Enter a key");
-let value = prompt("Enter a value");
-document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+// let key = prompt("Enter a key");
+// let value = prompt("Enter a value");
+// document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
 console.log(document.cookie);
 
 // Localstorage in JavaScript:
+let key = prompt("Enter key you want to set");
+let value = prompt("Enter value you want to set");
+localStorage.setItem(key, value);
+console.log(`The value at ${key} is ${localStorage.getItem(key)}`);
+if (key == "red" || key == "blue") {
+  localStorage.removeItem(key);
+}
+if (key == 0) {
+  localStorage.clear();
+}
+
