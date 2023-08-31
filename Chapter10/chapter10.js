@@ -1,3 +1,4 @@
+//  Chapter10: Network Requests & Storing Data:
 // Fetch API:
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/clone";
 
@@ -16,7 +17,7 @@ fetch(url)
     console.log(`Error: ${error}`);
   });
 
-// Post method using Fetch API
+// Post method using Fetch API:
 const url2 = "https://jsonplaceholder.typicode.com/posts";
 const createAPostRequest = async (resources) => {
   let options = {
@@ -48,3 +49,14 @@ const mainFunction = async () => {
   console.log(await getResponseWithID(96));
 };
 mainFunction();
+
+// Cookies in JavaScript:
+document.cookie = "name=walterWhite";
+document.cookie = "name1=stewie";
+document.cookie = "name2=peterGriffin";
+let key = prompt("Enter a key");
+let value = prompt("Enter a value");
+document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+console.log(document.cookie);
+
+// Localstorage in JavaScript:
