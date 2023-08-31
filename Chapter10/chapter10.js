@@ -15,3 +15,36 @@ fetch(url)
   .catch((error) => {
     console.log(`Error: ${error}`);
   });
+
+// Post method using Fetch API
+const url2 = "https://jsonplaceholder.typicode.com/posts";
+const createAPostRequest = async (resources) => {
+  let options = {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify(resources),
+  };
+  let response = await fetch(url2, options);
+  let data = response.json();
+  return data;
+};
+const getResponseWithID = async (id) => {
+  let response = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${id}`
+  );
+  let data = response.json();
+  return data;
+};
+const mainFunction = async () => {
+  let resources = {
+    title: "Ray",
+    body: "Dark",
+    userId: 64,
+  };
+  let AfterPOSTResponse = await createAPostRequest(resources);
+  console.log(AfterPOSTResponse);
+  console.log(await getResponseWithID(96));
+};
+mainFunction();
