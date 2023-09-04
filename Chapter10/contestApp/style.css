@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik+Iso&family=Ubuntu&display=swap");
 * {
   margin: 0%;
   padding: 0%;
@@ -92,6 +92,7 @@ body {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
 }
 .card h2 {
+  font-family: "Ubuntu", sans-serif;
   margin-top: 1vw;
   display: flex;
   align-items: center;
@@ -99,6 +100,7 @@ body {
   width: 100%;
   padding: 0vw 2vw;
   height: 18vw;
+  color: #7d204dc7;
 }
 .card img {
   margin-top: 0vw;
@@ -118,9 +120,11 @@ body {
   border-radius: 0.6vw;
   color: aliceblue;
   margin-right: 1vw;
+  text-align: center;
 }
 .info p {
   margin: 0.5vw 0vw;
+
 }
 .card button {
   outline: none;

@@ -49,10 +49,10 @@ response
                     <p> <span>Site: </span> ${contests[contest].site}</p>
                     <p> <span>Starts At: </span> ${startTime}</p>
                     <p> <span>Ends At: </span> ${endTime}</p>
-                    <p> <span>Status: </span> ${contests[contest].status}</p>
+                    <p> <span>Status: </span>${contests[contest].status} </p>
                     <p> <span>In 24hr?: </span> ${contests[contest].in_24_hours}</p>
                 </div>
-                <button> <a href="${contests[contest].url}">Visit Site</a></button>
+                <button> <a target="_blank" href="${contests[contest].url}">Visit ${contests[contest].site}</a></button>
             </div>`;
     }
     cardContainer.innerHTML = htmlOfEachCard;
