@@ -68,16 +68,16 @@ response
   });
 
 // Q.02/03/04
-let getUserNote = localStorage.getItem("note");
-alert("note from localStorage is----->\n " + getUserNote);
+// let getUserNote = localStorage.getItem("note");
+// alert("note from localStorage is----->\n " + getUserNote);
 
-let userNote = prompt("Please! Enter your note here");
-if (userNote) {
-  localStorage.setItem("note", userNote);
-}
+// let userNote = prompt("Please! Enter your note here");
+// if (userNote) {
+//   localStorage.setItem("note", userNote);
+// }
 
-let deleteUserNote = confirm("Do you want to delete your note");
-if (deleteUserNote) {
-  localStorage.removeItem("note");
-  alert("Your note has been deleted!");
-}
+// let deleteUserNote = confirm("Do you want to delete your note");
+// if (deleteUserNote) {
+//   localStorage.removeItem("note");
+//   alert("Your note has been deleted!");
+// }
